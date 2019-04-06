@@ -5,7 +5,7 @@ ETL
 Peter Orphan, Danielle Perkins, Tim DeRousse
 
 # Project Description / Outline
-Car models database
+Education database
 
 # Data Sets To Be Used
 mbas.xlsx from https://trends.collegeboard.org
