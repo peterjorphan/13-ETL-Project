@@ -8,7 +8,7 @@ Peter Orphan, Danielle Perkins, Tim DeRousse
 Education database
 
 # Data Sets To Be Used
-mbas.xlsx from https://trends.collegeboard.org
+mbas.xlsx from https://trends.collegeboard.org 
 tuition.xlsx US Department of Education, National Center for Education STatistics, Higher Education General INformation Survey (HEGIS)
 
 # Preliminary sketch of database (type of DB, tables, etc)
