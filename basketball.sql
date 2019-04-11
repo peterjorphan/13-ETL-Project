@@ -8,19 +8,31 @@ CREATE TABLE salary (
   Season TEXT, 
   RK INT,
   Team TEXT,
-  Salary DECIMAL(13,2),
-  namekey VARCHAR(64),
-  FOREIGN KEY fk_cat(namekey)
-  REFERENCES players(namekey)
+  Salary DECIMAL(12,0),
+  namekey VARCHAR(64) 
+  -- FOREIGN KEY fk_cat(namekey)
+  -- REFERENCES players(namekey)
 );
 
 DROP TABLE IF EXISTS players;
 CREATE TABLE players (
   namekey VARCHAR(64) PRIMARY KEY,
   Player TEXT, 
-  Height_cm DECIMAL(3,2), 
-  Weight_kg DECIMAL(3,2), 
-  College TEXT,
-  Birth_City TEXT, 
-  Birth_State TEXT
+  height DECIMAL(5,2), 
+  weight DECIMAL(5,2), 
+  college TEXT,
+  birth_city TEXT, 
+  birth_state TEXT
 );
+
+DROP TABLE IF EXISTS player_data;
+CREATE TABLE player_data (
+  id INT PRIMARY KEY,
+  namekey VARCHAR(64),
+  name TEXT, 
+  year_start INT, 
+  year_end INT, 
+  position TEXT
+);
+
+
