@@ -3,7 +3,7 @@ USE basketball_db;
 
 DROP TABLE IF EXISTS salary;
 CREATE TABLE salary (
-  id INT PRIMARY KEY,
+  id INT NOT NULL PRIMARY KEY,
   Name TEXT,
   Season TEXT, 
   RK INT,
@@ -16,7 +16,7 @@ CREATE TABLE salary (
 
 DROP TABLE IF EXISTS players;
 CREATE TABLE players (
-  namekey VARCHAR(64) PRIMARY KEY,
+  namekey VARCHAR(64) NOT NULL PRIMARY KEY,
   Player TEXT, 
   height DECIMAL(5,2), 
   weight DECIMAL(5,2), 
@@ -27,12 +27,22 @@ CREATE TABLE players (
 
 DROP TABLE IF EXISTS player_data;
 CREATE TABLE player_data (
-  id INT PRIMARY KEY,
-  namekey VARCHAR(64),
+  id INT NOT NULL PRIMARY KEY,
   name TEXT, 
   year_start INT, 
   year_end INT, 
-  position TEXT
+  position TEXT, 
+  birth_date DATE, 
+  namekey VARCHAR(64)
 );
 
+/* 
+ALTER TABLE salary 
+ADD FOREIGN KEY (namekey) REFERENCES players(namekey);
+ALTER TABLE player_data 
+ADD FOREIGN KEY (namekey) REFERENCES players(namekey);
+*/
 
+SELECT * FROM basketball_db.players;
+SELECT * FROM basketball_db.player_data;
+SELECT * FROM basketball_db.salary;
